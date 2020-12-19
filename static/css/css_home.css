@@ -1,0 +1,162 @@
+html,body{
+	margin:0;
+	padding:0;
+	width: 100%;
+	height:100%;
+	background-color:#f4e3d4;
+}
+.wrapper{
+	width: 100%;
+	height:100%;
+	min-height: 100%;
+}
+.content{
+	padding-left: 50px;
+}
+.content:hover{
+	cursor: pointer;
+}
+.header{
+	width:100%;
+	height:15%;
+}
+.nav{
+	position: relative;
+	float:left;
+	width:20%;
+	height:70%;
+	
+}
+.logbt{
+	color:#ffffff;
+	width: 170px;
+	height: 50px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	background-color:rgb(94,94,94); 
+	border:0px; 
+	font-size:25px;
+	border-radius: 5px;
+	margin: 10px 0 25px; 
+}
+.logbt:hover{
+	cursor: pointer;
+}
+select{
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0;
+	border: 1px solid #e4e4e4;
+	border-radius: 4px;
+	font-size: 12px;
+	color: #000;
+	margin: 30px 0 0;
+}
+select option{
+	text-decoration: solid;
+}
+select:hover{
+	cursor: pointer;
+}
+.section{
+	position: relative;
+	float:left;
+	width:62%;
+	min-height:60%;
+	margin:60px 10px;
+}
+.section:after{
+	display: block;
+	clear: both;
+	content: '';
+  }
+.boldfont{
+	text-align: left;
+	font-size: 14px;
+	color: #000;
+	font-weight: bold;
+	padding-bottom:15px;
+}
+.contents{
+	border: 1px solid #d1d1d1;
+	font-family: 'NanumGothic', '나눔고딕', 'Dotum', '돋움', sans-serif;
+	font-size:12px;
+	color: #000;
+	margin-left:120px;
+	padding: 30px;
+	background-color: #ffffff;
+}
+.form{
+	border: 1px solid #e4e4e4;
+	background-color: #fbfbfb;
+	min-height: 100px;
+	min-width: 50px;
+	padding:30px;
+}
+.text_form{
+	width:100%;
+	border: 1px solid #e4e4e4;
+	background-color: #fbfbfb;
+	margin: 10px 0 20px;
+}
+.text_form input[type="text"],
+.text_form input[type="password"]{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	border: 0 none;
+	font-size: 12px;
+	color: #000;
+	box-sizing:border-box;
+}
+.radio_form{
+	width:100%;
+	border: 0 none;
+	background-color: #fbfbfb;
+	margin: 10px 0 20px;
+}
+.radio_form input[type="radio"],
+.radio_form label{
+	font-size: 12px;
+	color: #000;
+}
+.radio_form label{
+	margin-right:60px;
+}
+.table{
+	width: 93%;
+	height: 70px;
+	border-collapse: collapse;
+	background-color: #ffffff;
+	font-family: 'NanumGothic', '나눔고딕', 'Dotum', '돋움', sans-serif;
+	font-size:12px;
+	color: #555;
+	margin: 0 30px;
+}
+.table th, .table td{
+	border: 1px solid #c5c5c5;
+	font-family: 'NanumGothic', '나눔고딕', 'Dotum', '돋움', sans-serif;
+	font-size:12px;
+	color: #000000;
+	text-align: center;
+	padding: 10px 0;
+}
+.table th{
+	background-color: rgb(228, 226, 226);
+}
+.footer{
+	bottom: 0; left: 0; right: 0;
+	width: 100%;
+	clear:both;
+	background-color:#534e50;
+	padding: 15px 0;
+}
+.copyright{
+	height: 100%;
+	text-align: center;
+	line-height: 18px;
+	color:#ffffff;
+	font-size:10px;
+}

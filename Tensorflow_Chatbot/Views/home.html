@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>STUDY GROUP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static "css/css_home.css" %}">
+<link rel="stylesheet" href="{% static "css/jquery.e-calendar.css" %}"/>
+<script type="text/javascript" src="{% static "css/index.js" %}"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static "css/jquery.e-calendar.js" %}"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<!-- 상단 자리 -->
+		<header class="header" style="background-color:#534e50; height:90px;">
+			<div class="content" onclick="location.href='/'">
+				<img src="{% static "css/studygroup.png" %}" style="height:100px; width:100px; float:left;">
+				<div style="font-size:50px; line-height:185%; color:#ffffff">
+					<b>STUDY CHAT</b>
+				</div>
+			</div>
+		</header>
+		<!-- 왼쪽 자리 -->
+		<div class="nav">
+			<!-- 로그인 정보 표시 -->
+			<div style="font-size:25px; margin-top:30px;">
+				{% if request.session.user %}
+				<p>{{ request.session.user }}님 안녕하세요.</p>
+				<form method="POST" action="{% url 'logout' %}">
+					<button class="logbt" type="submit">로그아웃</button>
+				</form>
+				<button class="logbt" onclick = "location.href='{% url 'chat' %}'">채팅하기</button>
+                {% else %}
+                <button class="logbt"onclick = "location.href='{% url 'login' %}'">로그인</button><br>
+                <button class="logbt"onclick = "location.href='{% url 'signup' %}'">회원가입</button>
+                {% endif %}
+			</div>
+		</div>
+		
+		<!-- 버튼  -->
+		<section class="section">
+			<div style="background:#f4e3d4; border:0px solid; width:50%; height:20%; margin-top: 15px;">
+			    <div id="calendar" style="margin-left: 10px;">
+			    	<script type="text/javascript">
+			    		$(document).ready(function () {
+						    $('#calendar').eCalendar({
+
+						 weekDays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+						        months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+						        textArrows: {previous: '<', next: '>'},
+						        eventTitle: 'Events',
+						        url: '',
+						        events: [
+						            {title: 'Event 1', description: 'Description 1', datetime: new Date(2016, 7, 15, 17)},
+						            {title: 'Event 2', description: 'Description 2', datetime: new Date(2016, 7, 14, 16)},
+						            {title: 'Event 3', description: 'jQueryScript.Net', datetime: new Date(2016, 7, 10, 16)}
+						        ]});
+						});
+			    	</script>
+			    </div>
+			</div>
+		</section>
+		<!-- 하단 자리 -->
+		<footer class="footer" style="background-color:#534e50;">
+			<div class="copyright" style="color:#ffffff;">
+				서울캠퍼스 04620 서울특별시 중구 필동로 1길 30 동국대학교<br>
+				바이오메디캠퍼스 10326 경기도 고양시 일산동구 동국로32 동국대학교 바이오메디캠퍼스<br>
+				TEL 02-2260-3114 FAX 02-2277-1274<br>
+				Copyright(c) 2016 DONGGUK UNIVERSITY. ALL RIGHTS RESERVED.
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
